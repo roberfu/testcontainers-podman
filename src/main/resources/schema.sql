@@ -1,0 +1,6 @@
+DROP TABLE IF EXISTS pokemon;
+CREATE TABLE pokemon (
+    id BIGSERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    number BIGINT NOT NULL
+);
