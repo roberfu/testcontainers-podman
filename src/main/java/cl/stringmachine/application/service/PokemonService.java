@@ -1,10 +1,10 @@
 package cl.stringmachine.application.service;
 
-import cl.stringmachine.application.repository.model.Pokemon;
+import cl.stringmachine.application.service.dto.PokemonDTO;
 
 import java.util.List;
 
 public interface PokemonService {
 
-    List<Pokemon> findAll();
+    List<PokemonDTO> findAll();
 }

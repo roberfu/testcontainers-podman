@@ -3,6 +3,7 @@ package cl.stringmachine.application.service.impl;
 import cl.stringmachine.application.repository.PokemonRepository;
 import cl.stringmachine.application.repository.model.Pokemon;
 import cl.stringmachine.application.service.PokemonService;
+import cl.stringmachine.application.service.dto.PokemonDTO;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,7 +18,8 @@ public class PokemonServiceImpl implements PokemonService {
     }
 
     @Override
-    public List<Pokemon> findAll() {
-        return (List<Pokemon>) repository.findAll();
+    public List<PokemonDTO> findAll() {
+        return ((List<Pokemon>) repository.findAll()).stream()
+                .map(p -> new PokemonDTO(p.name(), p.number())).toList();
     }
 }

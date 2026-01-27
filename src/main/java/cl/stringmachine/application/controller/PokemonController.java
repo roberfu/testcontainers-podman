@@ -1,7 +1,7 @@
 package cl.stringmachine.application.controller;
 
-import cl.stringmachine.application.repository.model.Pokemon;
 import cl.stringmachine.application.service.PokemonService;
+import cl.stringmachine.application.service.dto.PokemonDTO;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,7 +19,7 @@ public class PokemonController {
     }
 
     @GetMapping
-    List<Pokemon> findAll() {
+    List<PokemonDTO> findAll() {
         return service.findAll();
     }
 }
