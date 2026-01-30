@@ -1,6 +1,6 @@
 # testcontainers-podman
 
-Testing testcontainers (spring-boot) with podman (bye docker!)
+Running Testcontainers on Spring Boot with Podman (goodbye Docker!)
 
 ### JPA implementation
 
